@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sosial Media Kita</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* FULL PAGE */
+        body, html{
+            height:100%;
+            overflow:auto;
+        }
+
+        /* BACKGROUND VIDEO */
+        #bg-video{
+            position: fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            z-index:-2;
+        }
+
+        /* OVERLAY GELAP TIPIS */
+        .overlay{
+            position: fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background: rgba(0,0,0,0.45);
+            z-index:-1;
+        }
+
+        /* WRAPPER UTAMA */
+        .container{
+            height:100%;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            color:white;
+            padding:20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        /* FOTO PROFIL */
+        .profile{
+            width:130px;
+            height:130px;
+            border-radius:50%;
+            overflow:hidden;
+            border:4px solid rgba(255,255,255,0.8);
+            margin-bottom:20px;
+            box-shadow:0 0 20px rgba(255,255,255,0.4);
+            animation: pop 1.2s ease;
+        }
+        .profile img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+
+        /* NAMA */
+        h1{
+            font-size:28px;
+            margin-bottom:5px;
+            text-shadow:0 0 10px rgba(255,255,255,0.5);
+        }
+
+        /* DESKRIPSI */
+        p{
+            font-size:15px;
+            margin-bottom:25px;
+            opacity:0.9;
+        }
+
+        /* TOMBOL SOSMED */
+        .social-links{
+            display:flex;
+            flex-direction:column;
+            gap:15px;
+            width:230px;
+        }
+
+        .social-links a{
+            background:rgba(255,255,255,0.2);
+            padding:12px;
+            border-radius:12px;
+            text-decoration:none;
+            color:white;
+            font-size:18px;
+            backdrop-filter:blur(8px);
+            box-shadow:0 4px 10px rgba(0,0,0,0.3);
+            transition:0.3s;
+        }
+
+        .social-links a:hover{
+            transform:scale(1.08);
+            background:rgba(255,255,255,0.35);
+        }
+
+        /* ANIMASI */
+        @keyframes fadeIn{
+            from{opacity:0; transform:translateY(20px);}
+            to{opacity:1; transform:translateY(0);}
+        }
+
+        @keyframes pop{
+            0%{transform:scale(0.5); opacity:0;}
+            100%{transform:scale(1); opacity:1;}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- VIDEO BACKGROUND -->
+    <video autoplay muted loop id="bg-video">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <!-- GELAP TIPIS -->
+    <div class="overlay"></div>
+
+    <!-- KONTEN -->
+    <div class="container">
+
+        <!-- FOTO PROFIL -->
+        <div class="profile">
+            <img src="IMG_0863.jpg" alt="Profil">
+        </div>
+
+        <h1>Ridho Firmansyah</h1>
+        <p>Selamat datang di sosial media saya</p>
+
+        <!-- LINK SOSMED -->
+        <div class="social-links">
+    <a href="https://www.tiktok.com/@ridhofirmansyah071" target="_blank">🔥 TikTok</a>
+    <a href="https://wa.me/085745604609" target=_blank>💬 WhatsApp</a>
+    <a href="https://www.instagram.com/firmansyah012abc?igsh=MXE1d3k5Y2Fxd2V3" target="_blank">📸 Instagram</a>
+  </div>                              
+    </div>
+
+</body>
+</html>
+
